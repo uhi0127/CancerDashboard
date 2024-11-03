@@ -1,0 +1,220 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+html {
+  width: 100%;
+  height: 100vh; }
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Pretendard Variable", Pretendard, sans-serif;
+  font-size: 15px;
+  color: #333; }
+  body .loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    flex-direction: column; }
+    body .loading .loading_image {
+      width: 200px;
+      height: 200px;
+      background: url("./image/loading.gif") no-repeat center center;
+      background-size: cover; }
+
+h2 {
+  font-size: 3rem; }
+
+.mainWrapper {
+  width: 100%;
+  height: 100%; }
+  .mainWrapper .mainHeader {
+    width: 100%;
+    height: 8%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .mainWrapper .mainHeader .mainH2 {
+      color: #99D1FF; }
+  .mainWrapper .mainNav {
+    width: 100%;
+    height: 8%; }
+    .mainWrapper .mainNav .mainUl {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .mainWrapper .mainNav .mainUl li:hover {
+        background-color: #008CFF;
+        color: white; }
+      .mainWrapper .mainNav .mainUl .sumLi, .mainWrapper .mainNav .mainUl .yearLi, .mainWrapper .mainNav .mainUl .ageLi {
+        width: 33.3%;
+        height: 100%;
+        text-align: center;
+        background: #CCE8FF;
+        border: 1px solid #fff;
+        transition: background-color 0.3s, color 0.3s; }
+        .mainWrapper .mainNav .mainUl .sumLi.active, .mainWrapper .mainNav .mainUl .yearLi.active, .mainWrapper .mainNav .mainUl .ageLi.active {
+          background-color: #008CFF;
+          color: white; }
+        .mainWrapper .mainNav .mainUl .sumLi .sumA, .mainWrapper .mainNav .mainUl .sumLi .yearA, .mainWrapper .mainNav .mainUl .sumLi .ageA, .mainWrapper .mainNav .mainUl .yearLi .sumA, .mainWrapper .mainNav .mainUl .yearLi .yearA, .mainWrapper .mainNav .mainUl .yearLi .ageA, .mainWrapper .mainNav .mainUl .ageLi .sumA, .mainWrapper .mainNav .mainUl .ageLi .yearA, .mainWrapper .mainNav .mainUl .ageLi .ageA {
+          width: 100%;
+          height: 100%;
+          font-size: 1.8rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white; }
+  .mainWrapper .sumaryMain, .mainWrapper .yearMain, .mainWrapper .ageMain {
+    width: 100%;
+    height: 84%;
+    background: #fff; }
+  .mainWrapper .cancerType {
+    width: 100%;
+    height: 6%;
+    position: relative; }
+    .mainWrapper .cancerType .cancers {
+      width: 20%;
+      height: 100%;
+      position: absolute;
+      right: 10%;
+      top: 30%;
+      font-size: 1.4rem;
+      padding-left: 1vw; }
+  .mainWrapper .yearGraph, .mainWrapper .ageGraph {
+    width: 100%;
+    height: 80%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .mainWrapper .yearGraph .canvasArea, .mainWrapper .ageGraph .canvasArea {
+      width: 90%;
+      height: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .mainWrapper .yearGraph .canvasArea .largeCanvas, .mainWrapper .ageGraph .canvasArea .largeCanvas {
+        width: 80vw !important;
+        /* Adjust as needed */
+        height: 70vh !important;
+        /* Adjust as needed */ }
+  .mainWrapper .sumaryGraph {
+    width: 100%;
+    height: 80%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .mainWrapper .sumaryGraph .canvasArea {
+      width: 60%;
+      height: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .mainWrapper .sumaryGraph .canvasArea .largeCanvas {
+        width: 65vw !important;
+        /* Adjust as needed */
+        height: 60vh !important;
+        /* Adjust as needed */ }
+      .mainWrapper .sumaryGraph .canvasArea canvas {
+        margin-left: -22vw; }
+
+@media screen and (max-width: 800px) {
+  h2 {
+    font-size: 8vw; }
+
+  .mainWrapper {
+    width: 100%;
+    height: 100%; }
+    .mainWrapper .mainHeader {
+      width: 100%;
+      height: 8%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .mainWrapper .mainHeader .mainH2 {
+        color: #99D1FF; }
+    .mainWrapper .mainNav {
+      width: 100%;
+      height: 8%; }
+      .mainWrapper .mainNav .mainUl {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .mainWrapper .mainNav .mainUl .sumLi, .mainWrapper .mainNav .mainUl .yearLi, .mainWrapper .mainNav .mainUl .ageLi {
+          width: 33.3%;
+          height: 100%;
+          text-align: center;
+          background: #CCE8FF;
+          border: 1px solid #fff;
+          transition: background-color 0.3s, color 0.3s; }
+          .mainWrapper .mainNav .mainUl .sumLi .sumA, .mainWrapper .mainNav .mainUl .sumLi .yearA, .mainWrapper .mainNav .mainUl .sumLi .ageA, .mainWrapper .mainNav .mainUl .yearLi .sumA, .mainWrapper .mainNav .mainUl .yearLi .yearA, .mainWrapper .mainNav .mainUl .yearLi .ageA, .mainWrapper .mainNav .mainUl .ageLi .sumA, .mainWrapper .mainNav .mainUl .ageLi .yearA, .mainWrapper .mainNav .mainUl .ageLi .ageA {
+            width: 100%;
+            height: 100%;
+            font-size: 4vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white; }
+        .mainWrapper .mainNav .mainUl li:hover {
+          background-color: #CCE8FF;
+          color: inherit; }
+    .mainWrapper .sumaryMain, .mainWrapper .yearMain, .mainWrapper .ageMain {
+      width: 100%;
+      height: 84%;
+      background: #fff; }
+    .mainWrapper .cancerType {
+      width: 100%;
+      height: 6%;
+      position: relative; }
+      .mainWrapper .cancerType .cancers {
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        right: 10%;
+        top: 30%;
+        font-size: 4vw;
+        padding-left: 3vw; }
+    .mainWrapper .yearGraph, .mainWrapper .ageGraph {
+      width: 100%;
+      height: 80%;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .mainWrapper .yearGraph .canvasArea, .mainWrapper .ageGraph .canvasArea {
+        width: 90%;
+        height: 80%;
+        display: block; }
+        .mainWrapper .yearGraph .canvasArea .smallCanvas, .mainWrapper .ageGraph .canvasArea .smallCanvas {
+          width: 90vw !important;
+          /* Adjust as needed */
+          height: 50vh !important;
+          /* Adjust as needed */ }
+    .mainWrapper .sumaryGraph {
+      width: 100%;
+      height: 80%;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .mainWrapper .sumaryGraph .canvasArea {
+        width: 80%;
+        height: 80%;
+        display: block; }
+        .mainWrapper .sumaryGraph .canvasArea .smallCanvas {
+          width: 90vw !important;
+          /* Adjust as needed */ }
+        .mainWrapper .sumaryGraph .canvasArea canvas {
+          margin-left: 0; } }
+
+/*# sourceMappingURL=style.css.map */

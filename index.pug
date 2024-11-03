@@ -1,0 +1,61 @@
+doctype html
+html(lang="ko")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="icon" href="./css/image/graph.png")
+        link(rel="stylesheet" href="./css/default.css")
+        link(rel="stylesheet" href="./css/style.css")
+        script(src="https://cdn.jsdelivr.net/npm/chart.js")
+        script(src="./js/list.js")
+        script(src="./js/drawPieChart.mjs" type="module")
+        script(src="./js/main.js" type="module")
+        script(src="./js/drawLineChart.mjs" type="module")
+        script(src="./js/drawHorizontalbar.mjs" type="module")
+        script(src="./js/drawVerticalbar.mjs" type="module")
+        title CANCER DASHBOARD
+    body
+        .loading#loading
+            .loading_image
+            p 데이터를 불러오는 중입니다.
+        section.mainWrapper
+            header.mainHeader
+                h2.mainH2 CANCER DASHBOARD
+            nav.mainNav
+                ul.mainUl
+                   
+                    li.yearLi
+                        a.yearA(href="#") 연도별 그래프
+
+                    li.ageLi
+                        a.ageA(href="#") 연령별 그래프
+
+                    li.sumLi
+                        a.sumA(href="#") 요약 그래프
+
+            section.yearMain
+                div.cancerType
+                    select(name="yearCancers" id="yearCancers" class="cancers cancerTypeSelect")
+                        option(value="모든암" ) 암 종류 선택
+
+                section.yearGraph    
+                    div.canvasArea
+                        canvas#yearCanvas
+
+            section.ageMain 
+                div.cancerType
+                    select(name="ageCancers" id="ageCancers" class="cancers cancerTypeSelect")
+                        option(value="모든암") 암 종류 선택
+                section.ageGraph
+                    div.canvasArea
+                        canvas#ageCanvas
+
+            section.sumaryMain
+                div.cancerType
+                    
+                section.sumaryGraph    
+                    div.canvasArea
+                        canvas#sumaryCanvas_f
+                        
+                        canvas#sumaryCanvas_s
+
