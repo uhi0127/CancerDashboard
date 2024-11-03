@@ -1,7 +1,7 @@
 import { MakeChart } from './makeChart.mjs';
 import { fetchData } from './Fetches.js';
 // 시험
-1122
+112233
 export class HorizontalbarChart extends MakeChart {
     constructor(id) {
         super(id);
